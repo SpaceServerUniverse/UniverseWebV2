@@ -45,7 +45,7 @@ export default function Home() {
                                 animate={{ opacity: 1 }}
                                 transition={{ duration: 1, delay: 0.5 }}
                                 key="h1-container"
-                                className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4  bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent"
+                                className="text-4xl sm:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent"
                             >
                                 SpaceServer
                             </motion.h1>
@@ -54,7 +54,7 @@ export default function Home() {
                                 animate={{ opacity: 1 }}
                                 transition={{ duration: 1, delay: 1 }}
                                 key="h2-container"
-                                className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4  bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent"
+                                className="text-4xl sm:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent"
                             >
                                 - Universe -
                             </motion.h2>

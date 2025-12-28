@@ -3,7 +3,7 @@ export default function AboutPage() {
     <div className="min-h-screen bg-[#0a0a1a] py-8 px-4 pt-[100px]">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
             サーバーに入るには
           </h1>
           <p className="text-blue-300">
