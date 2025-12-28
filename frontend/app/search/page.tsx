@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { FaChevronLeft, FaChevronRight, FaSearch } from "react-icons/fa";
 import { apiRequest } from "@/utils/api";
 import { User } from "@/types/user";
-import { PlayerDetailPage } from "../player/[id]/page";
+import { PlayerDetailPage } from "@/components/PlayerDetailPage";
 
 export default function SearchPage() {
   const [searchQuery, setSearchQuery] = useState("");

@@ -19,9 +19,14 @@ services:
       DB_CONNECTION: mysql
       DB_HOST: ${DB_HOST}
       DB_PORT: ${DB_PORT}
-      DB_DATABASE: ${DB_DATABASE}
+      DB_DATABASE: UniverseWeb
       DB_USERNAME: ${DB_USER}
       DB_PASSWORD: ${DB_PASSWORD}
+      UNIVERSE_DB_HOST: ${DB_HOST}
+      UNIVERSE_DB_PORT: ${DB_PORT}
+      UNIVERSE_DB_DATABASE: SpaceServerUniverse
+      UNIVERSE_DB_USERNAME: ${DB_USER}
+      UNIVERSE_DB_PASSWORD: ${DB_PASSWORD}
       SESSION_DRIVER: redis
       CACHE_STORE: redis
       REDIS_HOST: ${REDIS_HOST}
