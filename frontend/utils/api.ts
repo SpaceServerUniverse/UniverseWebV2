@@ -1,9 +1,20 @@
 const resolveBaseUrl = (): string => {
-  const envBase = process.env.NEXT_PUBLIC_API_URL
-  if (envBase) return envBase
-  if (typeof window !== 'undefined' && window.location?.origin) {
+  // クライアントサイド（ブラウザ）の場合
+  if (typeof window !== 'undefined') {
+    // 常に現在のoriginを使用（Mixed Contentエラーを回避）
+    // バックエンドは同じドメインのリバースプロキシ経由でアクセスする前提
     return window.location.origin
   }
+
+  // サーバーサイド（SSR）の場合
+  // 内部DockerネットワークのURLを優先
+  const backendInternalUrl = process.env.BACKEND_INTERNAL_URL
+  if (backendInternalUrl) return backendInternalUrl
+
+  // フォールバック
+  const envBase = process.env.NEXT_PUBLIC_API_URL
+  if (envBase) return envBase
+
   return ''
 }
 
