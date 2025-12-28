@@ -1,0 +1,63 @@
+services:
+  universe-backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: backend
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend:/var/www/html
+    environment:
+      - DB_CONNECTION=mysql
+      - DB_HOST=docker-db-1
+      - DB_PORT=3306
+      - DB_DATABASE=UniverseWeb
+      - DB_USERNAME=root
+      - DB_PASSWORD=password
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+      - CACHE_STORE=redis
+      - SESSION_DRIVER=redis
+    depends_on:
+      - universe-redis
+    networks:
+      - space_network
+      - shared_network
+
+  universe-frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: frontend
+    volumes:
+      - ./frontend:/app
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=development
+      - NEXT_PUBLIC_API_URL=http://localhost:8000
+    depends_on:
+      - universe-backend
+    networks:
+      - space_network
+
+  universe-redis:
+    image: redis:7-alpine
+    container_name: redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    command: redis-server --appendonly yes
+    networks:
+      - space_network
+
+volumes:
+  redis_data:
+
+networks:
+  space_network:
+    driver: bridge
+  shared_network:
+    external: true
