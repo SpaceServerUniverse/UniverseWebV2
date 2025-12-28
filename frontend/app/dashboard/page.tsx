@@ -159,68 +159,6 @@ export default function DashboardPage() {
                         </div>
                     </div>
                 </div>
-
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                    <div className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30 backdrop-blur-sm p-6 shadow-lg shadow-purple-500/10 rounded-xl">
-                        <h3 className="text-xl font-bold text-white mb-4" >
-                            最近のアクティビティ
-                        </h3>
-                        <div className="space-y-3">
-                            <div className="flex items-start gap-3 p-3 bg-purple-900/20 rounded-lg border border-purple-500/20">
-                                <div className="w-2 h-2 bg-purple-400 rounded-full mt-2" />
-                                <div>
-                                    <p className="text-white text-sm" >
-                                        惑星「ネプチューンα」を発見
-                                    </p>
-                                    <p className="text-purple-300/70 text-xs mt-1">2時間前</p>
-                                </div>
-                            </div>
-                            <div className="flex items-start gap-3 p-3 bg-purple-900/20 rounded-lg border border-purple-500/20">
-                                <div className="w-2 h-2 bg-blue-400 rounded-full mt-2" />
-                                <div>
-                                    <p className="text-white text-sm" >
-                                        レベル42に到達
-                                    </p>
-                                    <p className="text-purple-300/70 text-xs mt-1">5時間前</p>
-                                </div>
-                            </div>
-                            <div className="flex items-start gap-3 p-3 bg-purple-900/20 rounded-lg border border-purple-500/20">
-                                <div className="w-2 h-2 bg-green-400 rounded-full mt-2" />
-                                <div>
-                                    <p className="text-white text-sm" >
-                                        実績「宇宙探検家」を獲得
-                                    </p>
-                                    <p className="text-purple-300/70 text-xs mt-1">1日前</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    {/* Quick Stats */}
-                    <div className="bg-gradient-to-br from-cyan-900/30 to-blue-900/30 border-cyan-500/30 backdrop-blur-sm p-6 shadow-lg shadow-cyan-500/10 rounded-xl">
-                        <h3 className="text-xl font-bold text-white mb-4" >
-                            統計情報
-                        </h3>
-                        <div className="space-y-4">
-                            <div className="flex justify-between items-center p-3 bg-cyan-900/20 rounded-lg border border-cyan-500/20">
-                                <span className="text-cyan-200" >発見した惑星</span>
-                                <span className="text-white font-bold">12</span>
-                            </div>
-                            <div className="flex justify-between items-center p-3 bg-cyan-900/20 rounded-lg border border-cyan-500/20">
-                                <span className="text-cyan-200" >建設した基地</span>
-                                <span className="text-white font-bold">5</span>
-                            </div>
-                            <div className="flex justify-between items-center p-3 bg-cyan-900/20 rounded-lg border border-cyan-500/20">
-                                <span className="text-cyan-200" >倒したボス</span>
-                                <span className="text-white font-bold">8</span>
-                            </div>
-                            <div className="flex justify-between items-center p-3 bg-cyan-900/20 rounded-lg border border-cyan-500/20">
-                                <span className="text-cyan-200" >採掘した鉱石</span>
-                                <span className="text-white font-bold">2,547</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     )
